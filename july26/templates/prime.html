@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">{% csrf_token %}
+        <label for="prime">number:</label>
+        <input id="prime" name="primeNumber" type="number" placeholder="Enter Number" required><br>
+        <button>Submit</button>
+        {% if any %}
+        <p> {{ q }} is not a prime</p>
+        {% else %}
+        <p> {{ q }} is a prime</p>
+        {% endif %}
+        {{ any }}
+
+
+
+    </form>
+    
+</body>
+</html>
